@@ -55,6 +55,18 @@ img {
     }
 }
 
+@-webkit-keyframes miPrimeraAnimacion {
+    0% {
+        margin-top: 150%;
+    }
+    60% {
+        margin-top: -5%;
+    }
+    100% {
+        margin-top: 0%;
+    }
+}
+
 @keyframes leftAnimation {
     0% {
         transform: rotate(0deg);
@@ -67,7 +79,31 @@ img {
     }
 }
 
+@-webkit-keyframes leftAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
 @keyframes rigthAnimation {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(20px, -5px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+@-webkit-keyframes rigthAnimation {
     0% {
         transform: translate(0, 0);
     }
@@ -93,17 +129,24 @@ img {
     height: 60%;
 }
 
-.container {
+.container,
+.container2 {
     background-color: #d5c75f;
     width: 100%;
     display: flex;
     flex-flow: row wrap;
+    text-align: center;
 }
 
-.container div {
+.container div,
+.container2 div {
     box-sizing: border-box;
     margin: 5% auto;
-    border: solid 1px black;
+}
+
+.container2 div img {
+    margin: auto 5%;
+    width: 90%;
 }
 
 a>img {
@@ -190,6 +233,9 @@ a>img {
     .contenido {
         max-width: 900px;
     }
+    .container2 div {
+        width: 33%;
+    }
 }
 
 @media (max-width:230px) {
@@ -239,4 +285,22 @@ a>img {
 
 ul {
     padding: 0;
+}
+
+
+/****Efectos imagenes***/
+
+.imagen1 {
+    -webkit-filter: blur(10px);
+    filter: blur(10px);
+}
+
+.imagen3 {
+    -webkit-filter: sepia(90%);
+    filter: sepia(90%);
+}
+
+.container2 div:nth-child(even) {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
 }
