@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'DancingScript';
+    src: url('../fuentes/DancingScript-Regular.ttf');
+}
+
 #cabecera {
     height: 10%;
     background-color: #5b7989;
@@ -5,10 +10,11 @@
     display: flex;
     flex-flow: row wrap;
     color: white;
-    font-family: 'Great Vibes', cursive;
+    font-family: 'DancingScript';
 }
 
 h1 {
+    padding-left: 2%;
     flex-grow: 1;
     text-shadow: 1px 2px 2px #02010a;
 }
@@ -29,7 +35,12 @@ h1 {
 }
 
 body {
+    background-color: #02010a;
     animation: miPrimeraAnimacion 1s;
+}
+
+img {
+    box-shadow: 1px 2px 2px #02010a;
 }
 
 @keyframes miPrimeraAnimacion {
@@ -129,7 +140,14 @@ a>img {
     box-shadow: 1px 2px 2px #82c3a6;
 }
 
-@media (max-width:500px) {
+.contenido {
+    margin: 0 auto;
+}
+
+@media (max-width:900px) {
+    .contenido {
+        max-width: 100%;
+    }
     .imgIzquierda {
         width: 90%;
         order: 1;
@@ -168,6 +186,12 @@ a>img {
     }
 }
 
+@media screen and (min-width:901px) {
+    .contenido {
+        max-width: 900px;
+    }
+}
+
 @media (max-width:230px) {
     h1 {
         font-size: 12px;
@@ -178,20 +202,11 @@ a>img {
 }
 
 
-/*media (min-width:720px) {
-    h1 {
-        font-size: 36px;
-    }
-    #menu {
-        font-size: 18px;
-    }
-}*/
-
-
 /*****FOOTER****/
 
 .footer {
     background-color: #C6d5c5;
+    font-family: 'DancingScript';
     display: flex;
     flex-flow: row wrap;
     border-radius: 0 0 12px 12px;
@@ -215,4 +230,13 @@ a>img {
 
 .derechos {
     flex-grow: 1;
+}
+
+.redesSociales ul li {
+    list-style-type: none;
+    margin-top: 2%;
+}
+
+ul {
+    padding: 0;
 }
